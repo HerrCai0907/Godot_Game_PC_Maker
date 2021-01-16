@@ -1,0 +1,85 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "ComponentInMap",
+"class": "BasisComponent",
+"language": "GDScript",
+"path": "res://scripts/Components/BasisComponent.gd"
+}, {
+"base": "Node",
+"class": "CalculatedComponent",
+"language": "GDScript",
+"path": "res://scripts/Components/CalculatedComponent.gd"
+}, {
+"base": "Node2D",
+"class": "ComponentInMap",
+"language": "GDScript",
+"path": "res://scripts/Components/ComponentInMap.gd"
+}, {
+"base": "BasisComponent",
+"class": "DFF",
+"language": "GDScript",
+"path": "res://scripts/Components/DFF.gd"
+}, {
+"base": "BasisComponent",
+"class": "IO_Input",
+"language": "GDScript",
+"path": "res://scripts/Components/IO_Input.gd"
+}, {
+"base": "BasisComponent",
+"class": "IO_Output",
+"language": "GDScript",
+"path": "res://scripts/Components/IO_Output.gd"
+}, {
+"base": "Line2D",
+"class": "Line",
+"language": "GDScript",
+"path": "res://scripts/Components/Line.gd"
+}, {
+"base": "TextureButton",
+"class": "Point",
+"language": "GDScript",
+"path": "res://scripts/Components/Point.gd"
+}, {
+"base": "ComponentInMap",
+"class": "UserDefinedComponent",
+"language": "GDScript",
+"path": "res://scripts/Components/UserDefinedComponent.gd"
+} ]
+_global_script_class_icons={
+"BasisComponent": "",
+"CalculatedComponent": "",
+"ComponentInMap": "",
+"DFF": "",
+"IO_Input": "",
+"IO_Output": "",
+"Line": "",
+"Point": "",
+"UserDefinedComponent": ""
+}
+
+[application]
+
+config/name="PC Maker"
+run/main_scene="res://scenes/Game.tscn"
+config/icon="res://images/icon.png"
+
+[autoload]
+
+GlobalFunc="*res://scripts/global_func.gd"
+
+[display]
+
+window/stretch/mode="2d"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/ComponentMenu.gd" type="Script" id=1]
+[ext_resource path="res://images/UI/ui_left.png" type="Texture" id=2]
+[ext_resource path="res://images/UI/ui_right.png" type="Texture" id=3]
+[ext_resource path="res://images/BGs/ComponentMenu.png" type="Texture" id=4]
+
+[node name="ComponentMenu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="BG" type="Sprite" parent="."]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+
+[node name="LeftButton" type="TextureButton" parent="."]
+margin_left = -255.0
+margin_top = -30.0
+margin_right = -246.0
+margin_bottom = 30.0
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightButton" type="TextureButton" parent="."]
+margin_left = 245.0
+margin_top = -30.0
+margin_right = 254.0
+margin_bottom = 30.0
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

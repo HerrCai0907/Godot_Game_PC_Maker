@@ -1,0 +1,116 @@
+{
+
+"w0" : {
+	"next" : "w1",
+	"text" : ""
+},
+
+"w1" : {
+	"next" : "w2",
+	"text" : "欢迎进入芯片的世界"
+},
+"w2" : {
+	"next" : "w3",
+	"text" : "在这里你会面临非常多的奇奇怪怪挑战"
+},
+"w3" : {
+	"next" : "1c1",
+	"text" : "相信我,你会搭建出一台[s]完美[/s]卡死的电脑"
+},
+
+
+"1c1" : {
+	"next" : "1c1a",
+	"text" : "首先,我们先来看看基本元器件的使用"
+},
+
+"1c1a" : {
+	"next" : "1c1b",
+	"text" : "复制器:复制输入的信号\n[img=64]res://images/Compenents/Gate_Proliferation.png[/img]"
+},
+
+"1c1b" : {
+	"next" : "1c1c",
+	"text" : "输入元件:输入任意信号\n[img=64]res://images/Compenents/IO_Input.png[/img]"
+},
+
+"1c1c" : {
+	"next" : "1c2",
+	"text" : "输出元件:输出信号,保存时使用\n[img=64]res://images/Compenents/IO_Output.png[/img]"
+},
+
+"1c2" : {
+	"next" : "1c3",
+	"text" : "与门(*):输入均为1,输出才为1\n[table=3][cell] in1 [/cell][cell] in2 [/cell][cell] out [/cell][cell]  0[/cell][cell]  0[/cell][cell]  0[/cell][cell]  0[/cell][cell]  1[/cell][cell]  0[/cell][cell]  1[/cell][cell]  0[/cell][cell]  0[/cell][cell]  1[/cell][cell]  1[/cell][cell]  1[/cell][/table]\n[img=64]res://images/Compenents/Gate_And.png[/img]"
+},
+
+"1c3" : {
+	"next" : "1c4",
+	"text" : "或门(+):输入只有存在1,输出就为1\n[table=3][cell] in1 [/cell][cell] in2 [/cell][cell] out [/cell][cell]  0[/cell][cell]  0[/cell][cell]  0[/cell][cell]  0[/cell][cell]  1[/cell][cell]  1[/cell][cell]  1[/cell][cell]  0[/cell][cell]  1[/cell][cell]  1[/cell][cell]  1[/cell][cell]  1[/cell][/table]\n[img=64]res://images/Compenents/Gate_Or.png[/img]"
+},
+
+"1c4" : {
+	"next" : "1c5",
+	"text" : "非门(NOT):将输入反正输出\n[table=2][cell] in [/cell][cell] out [/cell][cell]  0[/cell][cell]  1[/cell][cell]  1[/cell][cell]  0[/cell][/table]\n[img=64]res://images/Compenents/Gate_Not.png[/img]"
+},
+
+"1c5" : {
+	"next" : "1c6",
+	"text" : "数据触发器(DFF):将上一秒的输入输出\nout[t] = in[t-1]\n[img=64]res://images/Compenents/DFF.png[/img]"
+},
+
+"1c6" : {
+	"next" : "2c1",
+	"mission" : "1c6",
+	"text" : "后续如果忘记了元器件的基本信息,可以通过左上角的历史纪录查看\n现在,请点击左上角的任务标志~~~"
+},
+
+"2c1" : {
+	"next" : "2c2",
+	"text" : "好了,教程到此结束,现在你可以设计自己的电脑了"
+},
+
+"2c2" : {
+	"next" : "2c3",
+	"text" : "开玩笑的,现在你可以试着完成第一个目标了"
+},
+
+"2c3" : {
+	"next" : "2c4",
+	"help" : "2c3_1",
+	"mission" : "2c3",
+	"text" : "目标一:搭建一个选择器\n[table=2][cell] sel [/cell][cell] out [/cell][cell]  0[/cell][cell] in1[/cell][cell]  1[/cell][cell] in2[/cell][/table]"
+},
+
+"2c3_1" : {
+	"next" : "2c4",
+	"help" : "2c3_2",
+	"mission" : "2c3",	
+	"text" : "如果[sel = 0],需要[in1 = 1]才输出1\n如果[sel = 1],需要[in2 = 1]才输出1"
+},
+
+"2c3_2" : {
+	"next" : "2c4",
+	"help" : "2c3_2",
+	"mission" : "2c3",
+	"text" : "out = NOT(sel) * in1 + sel * in2"
+},
+
+
+"2c4" : {
+	"next" : "null",
+	"text" : "test"
+},
+
+
+
+
+
+"null" : {
+	"next" : "null",
+	"text" : ""
+}
+
+
+
+}

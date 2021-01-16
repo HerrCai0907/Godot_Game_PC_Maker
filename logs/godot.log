@@ -1,0 +1,11 @@
+Godot Engine v3.2.3.stable.official - https://godotengine.org
+OpenGL ES 3.0 Renderer: GeForce GTX 1650/PCIe/SSE2
+**ERROR**: hint:SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1
+Unrecognised output string: hint
+   At: main/input_default.cpp:1141:parse_mapping() - Condition "output_button == JOY_INVALID_OPTION && output_axis == JOY_INVALID_OPTION" is true. Continuing.
+**WARNING**: WASAPI: Unsupported number of channels: 1
+   At: drivers/wasapi/audio_driver_wasapi.cpp:330:init_render_device() - WASAPI: Unsupported number of channels: 1
+ 
+**WARNING**: Font oversampling only works with the resize modes 'Keep Width', 'Keep Height', and 'Expand'.
+   At: scene/main/scene_tree.cpp:1153:_update_root_rect() - Font oversampling only works with the resize modes 'Keep Width', 'Keep Height', and 'Expand'.
+Load Game

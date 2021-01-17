@@ -3,10 +3,20 @@ extends Button
 var save_info:Dictionary = {}
 var saveDialog:FileDialog
 
+#-----------------------------------------------------------
+#---------------------setget--------------------------------
+#-----------------------------------------------------------
+
+#-----------------------------------------------------------
+#---------------------system--------------------------------
+#-----------------------------------------------------------
 func _ready():
 	self.saveDialog = self.get_tree().get_nodes_in_group("SaveDialog")[0]
 	self.saveDialog.connect("file_selected",self,"data_save")
 
+#-----------------------------------------------------------
+#---------------------signal--------------------------------
+#-----------------------------------------------------------
 func _pressed():
 	# pop up dialog
 	self.saveDialog.invalidate()
@@ -31,6 +41,9 @@ func _pressed():
 				self.save_info[ilevel][inode.to_string()]["IOName"] = inode.linkedDisplay.nameEditer.text
 	print(self.save_info)
 
+#-----------------------------------------------------------
+#---------------------function------------------------------
+#-----------------------------------------------------------
 func data_save(filepath:String):
 	# save data
 	var path = filepath.left(filepath.length() - 4)
@@ -55,23 +68,6 @@ func data_save(filepath:String):
 	var v2Zoom:Vector2 = self.get_tree().get_nodes_in_group("Camera")[0].zoom
 	image.resize(image.get_width() * v2Zoom.x,image.get_height() * v2Zoom.y)
 	image.save_png(path + ".png")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

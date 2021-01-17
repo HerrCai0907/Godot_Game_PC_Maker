@@ -47,6 +47,7 @@ func _input(event):
 					self.componentID)
 			self.get_tree().call_group_flags(2,"Map","add_child",newComponent)
 			self.get_tree().call_group("Map","set_status",GlobalFunc.STATUS.idle)
+			get_tree().set_input_as_handled() # stop input
 			self.queue_free()
 
 	

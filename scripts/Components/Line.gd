@@ -9,10 +9,9 @@ var if_out_active:bool = true
 func set_in_point(value):
 	if if_in_active:
 		in_point = value
-		var tmp1:Vector2 = Vector2(2,2).rotated( deg2rad(value.linkedComponent.rotation_degrees) )
-		self.points[0] = (value as Control).rect_global_position + tmp1
+		self.points[0] = cal_point_center_pos(value)
 		if if_out_active: #if out not defined, set out point pos same as in point, else finish create
-			self.points[1] = (value as Control).rect_global_position + tmp1
+			self.points[1] = cal_point_center_pos(value)
 		else:
 			self.creating_finished()
 		print((value as Control).rect_global_position)
@@ -22,10 +21,9 @@ func set_in_point(value):
 func set_out_point(value):
 	if if_out_active:
 		out_point = value
-		var tmp1:Vector2 = Vector2(2,2).rotated( deg2rad(value.linkedComponent.rotation_degrees) )
-		self.points[1] = (value as Control).rect_global_position + tmp1
+		self.points[1] = cal_point_center_pos(value)
 		if if_in_active:
-			self.points[0] = (value as Control).rect_global_position + tmp1
+			self.points[0] = cal_point_center_pos(value)
 		else:
 			self.creating_finished()
 		print((value as Control).rect_global_position)
@@ -38,6 +36,9 @@ func creating_finished():
 	self.get_tree().get_nodes_in_group("Map")[0].activeNode = null
 	self.get_tree().get_nodes_in_group("Map")[0].status = GlobalFunc.STATUS.idle
 
+static func cal_point_center_pos(point) -> Vector2:
+	var tmp1:Vector2 = Vector2(2,2).rotated( deg2rad(point.linkedComponent.rotation_degrees) )
+	return (point as Control).rect_global_position + tmp1
 
 func _init():
 	self.points = [null,null]

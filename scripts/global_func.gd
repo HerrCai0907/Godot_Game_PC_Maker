@@ -5,7 +5,8 @@ enum STATUS {
 	create_component,
 	create_line,
 	simulation,
-	select_save_area
+	select_save_area,
+	move_component
 	}
 
 

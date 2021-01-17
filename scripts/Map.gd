@@ -17,3 +17,5 @@ func set_status(value):
 			info_display_label.text = "simulation"
 		GlobalFunc.STATUS.select_save_area:
 			info_display_label.text = "select image range"
+		GlobalFunc.STATUS.move_component:
+			info_display_label.text = "move or removeselected component"

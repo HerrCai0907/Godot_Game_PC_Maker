@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://images/icon.png" type="Texture" id=1]
 [ext_resource path="res://scripts/camera2D_control.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://images/UI/ui_stop_pressed.png" type="Texture" id=11]
 [ext_resource path="res://images/UI/ui_next_step_pressed.png" type="Texture" id=12]
 [ext_resource path="res://images/UI/ui_play_pressed.png" type="Texture" id=13]
+[ext_resource path="res://scripts/ClearButton.gd" type="Script" id=14]
 
 [node name="MainGame" type="Node2D" groups=[
 "MainGame",
@@ -79,10 +80,11 @@ __meta__ = {
 }
 
 [node name="SaveButton" type="Button" parent="HUD"]
-margin_left = 40.0
+margin_left = 20.0
 margin_top = 540.0
-margin_right = 100.0
+margin_right = 80.0
 margin_bottom = 580.0
+rect_min_size = Vector2( 60, 40 )
 text = "save"
 script = ExtResource( 6 )
 __meta__ = {
@@ -90,12 +92,25 @@ __meta__ = {
 }
 
 [node name="LoadButton" type="Button" parent="HUD"]
-margin_left = 120.0
+margin_left = 90.0
 margin_top = 540.0
-margin_right = 180.0
+margin_right = 150.0
 margin_bottom = 580.0
+rect_min_size = Vector2( 60, 40 )
 text = "load"
 script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClearButton" type="Button" parent="HUD"]
+margin_left = 175.0
+margin_top = 540.0
+margin_right = 235.0
+margin_bottom = 580.0
+rect_min_size = Vector2( 60, 40 )
+text = "Clear"
+script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

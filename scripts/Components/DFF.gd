@@ -6,5 +6,6 @@ extends BasisComponent
 #var outPointList:Array = [] #Point
 
 func _init(Pos=Vector2.ZERO,Deg=0).("DFF",1,1,Pos,Deg):
-	self.if_time_relevant = true
+	pass
+#	self.if_time_relevant = true
 
